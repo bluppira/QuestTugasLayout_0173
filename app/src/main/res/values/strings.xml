@@ -10,12 +10,11 @@
     <string name="description_1">leader of the Berry girl group</string>
 
     <string name="name_2">Blueberry Muffin</string>
-    <string name="description_">owner of the Blueberry Books bookstore</string>
+    <string name="description_2">owner of the Blueberry Books bookstore</string>
 
     <string name="name_3">Plum Pudding</string>
-    <string name="description__3">owner of the Sweet Beats Studio</string>
+    <string name="description_3">owner of the Sweet Beats Studio</string>
 
-    <string name="name_4">Ahmad Alfian</string>
-    <string name="phone_4">085436874190</string>
-    <string name="address_4">Gamping, Sleman</string>
+    <string name="name_4">Lemon Meringue</string>
+    <string name="description_4"> owner of the Lemon Salon</string>
 </resources>
