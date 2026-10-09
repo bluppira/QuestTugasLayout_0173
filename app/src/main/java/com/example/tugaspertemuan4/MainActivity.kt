@@ -74,3 +74,56 @@ fun MainScreen() {
             color = colorResource(R.color.text_dark)
         )
 
+        Spacer(Modifier.height(dimensionResource(R.dimen.card_spacing)))
+
+        Column(
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.card_spacing))
+        ) {
+            ProfileCard(
+                name = R.string.name_1,
+                description = R.string.description_1,
+                backgroundColor = R.color.card_red,
+                image = R.drawable.strawberry,
+                imageOnRight = true,
+                nameColor = R.color.text_white,
+                descriptionColor = R.color.text_cream
+            )
+            ProfileCard(
+                name = R.string.name_2,
+                description = R.string.description_2,
+                backgroundColor = R.color.card_olive,
+                image = R.drawable.blueberry,
+                imageOnRight = false,
+                nameColor = R.color.text_white,
+                descriptionColor = R.color.text_cream
+            )
+            ProfileCard(
+                name = R.string.name_3,
+                description = R.string.description_3,
+                backgroundColor = R.color.card_rose,
+                image = R.drawable.plum,
+                imageOnRight = true,
+                nameColor = R.color.text_white,
+                descriptionColor = R.color.text_cream
+            )
+            ProfileCard(
+                name = R.string.name_4,
+                description = R.string.description_4,
+                backgroundColor = R.color.card_blush,
+                image = R.drawable.lemon,
+                imageOnRight = false,
+                nameColor = R.color.text_dark,
+                descriptionColor = R.color.text_dark
+            )
+        }
+
+        Spacer(Modifier.weight(1f))
+
+        Text(
+            text = stringResource(R.string.copyright),
+            fontSize = dimensionResource(R.dimen.copyright_size).value.sp,
+            color = colorResource(R.color.text_dark)
+        )
+    }
+}
+
