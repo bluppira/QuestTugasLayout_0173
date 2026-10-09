@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Tugas Pertemuan 4</string>
+    <string name="app_name">QuestTugasLayout</string>
+
+    <string name="title">Strawberry Shortcake</string>
+    <string name="subtitle">Manis, ceria, dan penuh warna</string>
+    <string name="copyright">Copyright, 2026</string>
+    <string name="logo_desc">Logo Strawberry</string>
+
 </resources>
