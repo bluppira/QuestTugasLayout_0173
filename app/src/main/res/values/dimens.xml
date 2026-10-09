@@ -11,10 +11,10 @@
     <dimen name="copyright_size">12sp</dimen>
 
     <dimen name="card_spacing">12dp</dimen>
-    <dimen name="card_padding">16dp</dimen>
     <dimen name="card_corner">16dp</dimen>
-    <dimen name="card_height">110dp</dimen>
     <dimen name="image_size">110dp</dimen>
     <dimen name="image_space">110dp</dimen>
     <dimen name="image_overflow">12dp</dimen>
+    <dimen name="card_height">64dp</dimen>
+    <dimen name="card_padding">12dp</dimen>
 </resources>

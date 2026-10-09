@@ -46,7 +46,7 @@ fun MainScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(colorResource(R.color.screen_background))
+            .background(colorResource(R.color.seed_cream))
             .padding(dimensionResource(R.dimen.screen_padding)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -144,7 +144,6 @@ fun ProfileCard(
     val imageSpace = dimensionResource(R.dimen.image_space)
 
     Box(modifier = modifier.fillMaxWidth()) {
-        // Hanya kotak card yang di-clip, gambar di luar clip sehingga bisa keluar card
         Column(
             modifier = Modifier
                 .fillMaxWidth()
