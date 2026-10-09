@@ -127,3 +127,59 @@ fun MainScreen() {
     }
 }
 
+@Composable
+fun ProfileCard(
+    @StringRes name: Int,
+    @StringRes description: Int,
+    @ColorRes backgroundColor: Int,
+    @DrawableRes image: Int,
+    imageOnRight: Boolean,
+    @ColorRes nameColor: Int,
+    @ColorRes descriptionColor: Int,
+    modifier: Modifier = Modifier,
+    @DimenRes nameSize: Int = R.dimen.name_size
+) {
+    val overflow = dimensionResource(R.dimen.image_overflow)
+    val padding = dimensionResource(R.dimen.card_padding)
+    val imageSpace = dimensionResource(R.dimen.image_space)
+
+    Box(modifier = modifier.fillMaxWidth()) {
+        // Hanya kotak card yang di-clip, gambar di luar clip sehingga bisa keluar card
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = dimensionResource(R.dimen.card_height))
+                .clip(RoundedCornerShape(dimensionResource(R.dimen.card_corner)))
+                .background(colorResource(backgroundColor))
+                .padding(
+                    start = if (imageOnRight) padding else imageSpace,
+                    end = if (imageOnRight) imageSpace else padding,
+                    top = padding,
+                    bottom = padding
+                ),
+            verticalArrangement = Arrangement.Center
+        ) {
+            Text(
+                text = stringResource(name),
+                fontSize = dimensionResource(nameSize).value.sp,
+                fontWeight = FontWeight.Bold,
+                color = colorResource(nameColor)
+            )
+            Text(
+                text = stringResource(description),
+                fontSize = dimensionResource(R.dimen.detail_size).value.sp,
+                color = colorResource(descriptionColor)
+            )
+        }
+
+        Image(
+            painter = painterResource(image),
+            contentDescription = stringResource(R.string.logo_desc),
+            contentScale = ContentScale.Fit,
+            modifier = Modifier
+                .align(if (imageOnRight) Alignment.CenterEnd else Alignment.CenterStart)
+                .offset(x = if (imageOnRight) overflow else -overflow)
+                .size(dimensionResource(R.dimen.image_size))
+        )
+    }
+}
